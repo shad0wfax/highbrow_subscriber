@@ -1,23 +1,22 @@
 
 
-window.highresio = function( options ) {
+var Highbrow = function(options, window, undefined) {
 	//var imported = document.createElement('script');
 	// imported.src = 'js/feedback.js';
 	// document.getElementsByTagName('head')[0].appendChild(imported);
 	
 	// Load the css file first
 	var url1 = 'http://pub.dev:9000/assets/css/feedback.css';
-//	var url2 = 'css/uidarkness/jquery-ui-1.9.2.custom.min.css'
-		
-	
+	// var url2 = 'http://pub.dev:9000/assets/css/bootstrap.css';
+
 	
 	if(document.createStyleSheet) {
-	    try { document.createStyleSheet(url1); } catch (e) { }
-//	    try { document.createStyleSheet(url2); } catch (e) { }
+	    try { document.createStyleSheet(url1); } catch (e) { };
+	    // try { document.createStyleSheet(url2); } catch (e) { };
 	}
 	else {
 		createStylesheet(url1);
-//		createStylesheet(url2);
+		// createStylesheet(url2);
 	}
 	
 	// Load the feedback.js
